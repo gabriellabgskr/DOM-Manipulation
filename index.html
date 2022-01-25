@@ -87,13 +87,6 @@
                   <li><a class="dropdown-item" href="#productutensil" style="color: #336c7c">Utensil</a></li>
                   <li><a class="dropdown-item" href="#productpan" style="color: #336c7c">Alat Masak</a></li>
               </ul>
-              <script>
-                function myFunction() {
-                  var list = document.getElementsByClassName("dropdown-menu")[0];
-                  list.getElementsByClassName("child")[0].innerHTML = "Induksi";
-                }
-                </script>
-                
           </li>
             <li class="nav-item">
               <a class="nav-link"
@@ -106,21 +99,29 @@
           </ul>
           <div class="container-fluid">
             <form class="d-flex">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Enter gift card or promo code"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit"><h id="code" onclick="changeTextElement(this)">Reedem</h>
-              </button>
+              <input id="code" class="form-control me-2" placeholder="write your coupon code">
+              <button type="button" class="btn btn-outline-success" onclick="myFunction()">Redeem</button>
+              
               <!-- DOM 1 -->
               <script>
-                function changeTextElement(element){
-                  element.innerHTML="Done"
+                function myFunction() {
+                  let x = document.getElementById("code").value;
+                  let text;
+
+                  if(x=="KANAHOME2022") {
+                    text = "Enjoy your discount";
+                  }
+                  else {
+                    text = "Invalid code"
+                  }
+                  document.getElementById("demo").innerHTML = text;
                 }
               </script>
+
             </form>
+
+            <h8 id="demo" style="color: #336c7c;"></h8>
+
           </div>
         </div>
       </div>
