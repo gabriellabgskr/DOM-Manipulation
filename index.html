@@ -99,30 +99,18 @@
           </ul>
           <div class="container-fluid">
             <form class="d-flex">
-              <input id="code" class="form-control me-2" placeholder="write your coupon code">
-              <button type="button" class="btn btn-outline-success" onclick="myFunction()">Redeem</button>
-              
-              <!-- DOM 1 -->
-              <script>
-                function myFunction() {
-                  let x = document.getElementById("code").value;
-                  let text;
-
-                  if(x=="KANAHOME2022") {
-                    text = "Enjoy your discount";
-                  }
-                  else {
-                    text = "Invalid code"
-                  }
-                  document.getElementById("demo").innerHTML = text;
-                }
-              </script>
-
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
             </form>
-
-            <h8 id="demo" style="color: #336c7c;"></h8>
-
           </div>
+          
         </div>
       </div>
     </nav>
@@ -418,10 +406,38 @@
       <div class="kanahome-new-product" style="background-color: #bcd9c7">
       <div class="container">
         <div class="row kanahome-name">
-          <div class="col-12">
+          <div class="col-md-4 align-items-center text-center mt-0">
+          </div>
+          <div class="col-md-4 align-items-center text-center mt-0">
             <h4 class="text-center mx-auto" style="color: white">New Product</h4>
           </div>
-        </div>
+            <div class="col-md-4">
+            <form class="d-flex">
+              <input id="code" class="form-control me-2" placeholder="write your coupon code">
+              <button type="button" class="btn btn-outline-success" onclick="myFunction()">Redeem</button>
+              
+              <!-- DOM 1 -->
+              <script>
+                function myFunction() {
+                  let x = document.getElementById("code").value;
+                  let text;
+
+                  if(x=="KANAHOME2022") {
+                    text = "Enjoy 10% off for New Product";
+                  }
+                  else {
+                    text = "Invalid code"
+                  }
+                  document.getElementById("demo").innerHTML = text;
+                }
+              </script>
+
+            </form>
+
+            <h8 id="demo" style="color: #336c7c;"></h8>
+            </div>
+          </div>
+
         <section id="productkompor">
         <div class="row">
           <h5 class="marking" style="color: whitesmoke">Kompor Induksi</h5>
